@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AIEO 醫師內容力實戰工作坊｜陳昱傑醫師主講｜白袍人生學院</title>
+<meta name="description" content="2026/8/30（日）AIEO 醫師內容力實戰工作坊。在 AI 搜尋時代，讓你的專業被 AI 看見、被病人找到。陳昱傑醫師主講，白袍人生學院主辦。" />
+<meta property="og:title" content="AIEO 醫師內容力實戰工作坊｜陳昱傑醫師主講" />
+<meta property="og:description" content="在 AI 搜尋時代，讓你的專業被 AI 看見、被病人找到。2026/8/30 台北實體課程，白袍人生學院主辦。" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="zh_TW" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+/* =========================================================
+   白袍人生學院 CIS 配色系統  ——  60 / 30 / 10
+   ========================================================= */
+:root{
+  --navy:#1A3D63;       /* 主色 學院藍 */
+  --ink:#0E2A45;        /* 輔助 沉靜藍 */
+  --sky:#5E8CB5;        /* 輔助 晨曦藍 */
+  --gold:#E0A235;       /* 點綴 曙光金 */
+  --white:#FBF9F3;      /* 基底 白袍白 */
+  --graphite:#2E343A;   /* 中性 石墨灰 */
+  --cloud:#E9E7E0;      /* 中性 雲灰 */
+  --serif:'Noto Serif TC',serif;
+  --sans:'Noto Sans TC',sans-serif;
+  --mono:'Montserrat',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:var(--sans);
+  background:var(--white);
+  color:var(--graphite);
+  font-weight:400;
+  line-height:1.9;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block;}
+a{text-decoration:none;color:inherit;}
+section{position:relative;}
+
+/* ---------- 共用元件 ---------- */
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+.eyebrow{
+  font-family:var(--mono);
+  font-size:13px;font-weight:600;letter-spacing:.22em;
+  text-transform:uppercase;
+}
+.sec-title{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(28px,4.4vw,42px);
+  line-height:1.45;color:var(--navy);
+  letter-spacing:.04em;
+}
+.sec-title .hl{color:var(--gold);}
+.gold-line{width:54px;height:4px;background:var(--gold);border-radius:2px;}
+.center{text-align:center;}
+.center .gold-line{margin-left:auto;margin-right:auto;}
+
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--sans);font-weight:700;font-size:16px;
+  padding:16px 38px;border-radius:50px;cursor:pointer;
+  border:2px solid transparent;transition:.25s ease;letter-spacing:.04em;
+}
+.btn-gold{background:var(--gold);color:var(--ink);box-shadow:0 10px 26px -10px rgba(224,162,53,.7);}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 16px 32px -10px rgba(224,162,53,.85);}
+.btn-ghost{background:transparent;color:var(--white);border-color:rgba(251,249,243,.55);}
+.btn-ghost:hover{background:rgba(251,249,243,.12);border-color:var(--white);}
+.btn-navy{background:var(--navy);color:var(--white);box-shadow:0 10px 26px -12px rgba(26,61,99,.7);}
+.btn-navy:hover{transform:translateY(-3px);background:var(--ink);}
+
+/* 進場動畫 */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* =========================================================
+   導覽列
+   ========================================================= */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  transition:.3s ease;
+  background:rgba(26,61,99,.0);
+}
+header.solid{
+  background:rgba(26,61,99,.97);
+  box-shadow:0 6px 24px -12px rgba(0,0,0,.5);
+  backdrop-filter:blur(6px);
+}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px;}
+.brand{display:flex;align-items:center;gap:12px;}
+.brand .logo{width:42px;height:42px;flex:none;}
+.brand-text{line-height:1.15;}
+.brand-text .zh{
+  font-family:var(--serif);font-weight:900;font-size:18px;
+  color:var(--white);letter-spacing:.06em;
+}
+.brand-text .en{
+  font-family:var(--mono);font-weight:600;font-size:8.5px;
+  color:var(--gold);letter-spacing:.2em;
+}
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{
+  font-size:15px;color:rgba(251,249,243,.88);font-weight:500;
+  letter-spacing:.04em;transition:.2s;
+}
+.nav-links a:hover{color:var(--gold);}
+.nav-cta{
+  background:var(--gold);color:var(--ink);font-weight:700;
+  padding:9px 22px;border-radius:50px;font-size:14.5px;
+}
+.nav-cta:hover{color:var(--ink)!important;transform:translateY(-2px);}
+.burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;}
+.burger span{width:24px;height:2.5px;background:var(--white);border-radius:2px;transition:.25s;}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{
+  background:linear-gradient(160deg,var(--navy) 0%,var(--ink) 100%);
+  color:var(--white);
+  padding:150px 0 96px;
+  overflow:hidden;
+}
+.hero .light{
+  position:absolute;top:-220px;right:-180px;
+  width:620px;height:620px;pointer-events:none;
+  background:repeating-conic-gradient(from 0deg,
+    rgba(224,162,53,.22) 0deg 9deg, transparent 9deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 28%,transparent 68%);
+          mask:radial-gradient(circle,#000 28%,transparent 68%);
+}
+.hero-grid{
+  display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center;
+  position:relative;z-index:2;
+}
+.host-tag{
+  display:inline-flex;align-items:center;gap:9px;
+  background:rgba(224,162,53,.14);border:1px solid rgba(224,162,53,.45);
+  color:var(--gold);font-size:13.5px;font-weight:600;letter-spacing:.1em;
+  padding:7px 16px;border-radius:50px;margin-bottom:24px;
+}
+.host-tag .dot{width:7px;height:7px;background:var(--gold);border-radius:50%;}
+.hero h1{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(34px,5.4vw,58px);line-height:1.32;
+  letter-spacing:.03em;margin-bottom:22px;
+}
+.hero h1 .hl{
+  color:var(--gold);
+  position:relative;display:inline-block;
+}
+.hero .sub{
+  font-size:clamp(16px,2vw,19px);font-weight:300;
+  color:rgba(251,249,243,.85);line-height:2;margin-bottom:32px;
+  max-width:520px;
+}
+.hero .sub b{color:var(--white);font-weight:500;}
+.fact-row{
+  display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;
+}
+.fact{
+  background:rgba(251,249,243,.06);
+  border:1px solid rgba(251,249,243,.14);
+  border-radius:12px;padding:13px 18px;min-width:130px;
+}
+.fact .k{
+  font-family:var(--mono);font-size:11px;letter-spacing:.16em;
+  color:var(--sky);font-weight:600;margin-bottom:3px;
+}
+.fact .v{font-size:16px;font-weight:700;color:var(--white);}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+.seats-note{font-size:13.5px;color:rgba(251,249,243,.6);margin-top:14px;}
+.seats-note b{color:var(--gold);font-weight:700;}
+
+/* HERO 右側卡片 */
+.hero-card{
+  background:var(--white);color:var(--graphite);
+  border-radius:20px;padding:34px 32px;
+  box-shadow:0 40px 70px -30px rgba(0,0,0,.6);
+  position:relative;
+}
+.hero-card .ribbon{
+  position:absolute;top:-15px;left:32px;
+  background:var(--gold);color:var(--ink);
+  font-size:12.5px;font-weight:700;letter-spacing:.08em;
+  padding:6px 16px;border-radius:50px;
+}
+.hero-card h3{
+  font-family:var(--serif);font-weight:900;font-size:21px;
+  color:var(--navy);margin:10px 0 4px;letter-spacing:.04em;
+}
+.hero-card .course-en{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  color:var(--sky);font-weight:600;margin-bottom:18px;
+}
+.hc-list{list-style:none;}
+.hc-list li{
+  display:flex;gap:12px;padding:11px 0;
+  border-bottom:1px dashed var(--cloud);font-size:14.5px;
+}
+.hc-list li:last-child{border-bottom:none;}
+.hc-list .ic{
+  flex:none;width:24px;height:24px;border-radius:7px;
+  background:rgba(26,61,99,.08);color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;
+}
+.hc-list .lbl{color:#6b7177;font-size:12.5px;}
+.hc-list .val{font-weight:700;color:var(--navy);}
+.hero-card .countdown-mini{
+  margin-top:20px;background:var(--navy);border-radius:13px;
+  padding:16px;text-align:center;color:var(--white);
+}
+.countdown-mini .cd-label{
+  font-size:12px;letter-spacing:.14em;color:var(--sky);margin-bottom:8px;
+}
+.cd-units{display:flex;justify-content:center;gap:8px;}
+.cd-unit{background:rgba(251,249,243,.08);border-radius:8px;padding:8px 4px;flex:1;}
+.cd-unit .num{
+  font-family:var(--mono);font-weight:700;font-size:22px;color:var(--gold);
+}
+.cd-unit .u{font-size:10.5px;color:rgba(251,249,243,.65);letter-spacing:.05em;}
+
+/* =========================================================
+   信任條
+   ========================================================= */
+.trust{background:var(--ink);padding:22px 0;}
+.trust-row{
+  display:flex;justify-content:center;gap:46px;flex-wrap:wrap;
+  text-align:center;
+}
+.trust-item .n{
+  font-family:var(--mono);font-weight:700;font-size:30px;color:var(--gold);
+}
+.trust-item .t{font-size:13px;color:rgba(251,249,243,.78);letter-spacing:.05em;}
+
+/* =========================================================
+   區塊通用
+   ========================================================= */
+.section{padding:96px 0;}
+.section.alt{background:var(--white);}
+.sec-head{margin-bottom:54px;}
+.sec-head .eyebrow{color:var(--sky);margin-bottom:14px;}
+.sec-head .gold-line{margin-top:18px;}
+
+/* 為什麼要學 ——  痛點 */
+.why{background:linear-gradient(180deg,#fff 0%,#f3f1ea 100%);}
+.pain-lead{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(20px,2.6vw,27px);color:var(--navy);
+  line-height:1.85;letter-spacing:.04em;margin-bottom:10px;
+}
+.pain-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:42px;
+}
+.pain-card{
+  background:#fff;border-radius:16px;padding:30px 26px;
+  border:1px solid var(--cloud);
+  border-top:4px solid var(--sky);
+}
+.pain-card .q{
+  font-family:var(--serif);font-weight:700;font-size:18px;
+  color:var(--navy);margin-bottom:10px;letter-spacing:.03em;
+}
+.pain-card p{font-size:14.5px;color:#5b6066;font-weight:300;}
+.why-turn{
+  margin-top:46px;text-align:center;
+  background:var(--navy);border-radius:18px;padding:42px 32px;
+  position:relative;overflow:hidden;
+}
+.why-turn .light{
+  position:absolute;bottom:-200px;left:-120px;width:420px;height:420px;
+  background:repeating-conic-gradient(from 0deg,
+    rgba(224,162,53,.18) 0deg 9deg,transparent 9deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);
+          mask:radial-gradient(circle,#000 30%,transparent 70%);
+}
+.why-turn p{position:relative;z-index:2;}
+.why-turn .small{
+  font-family:var(--mono);font-size:12px;letter-spacing:.2em;
+  color:var(--gold);font-weight:600;margin-bottom:14px;
+}
+.why-turn .big{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(22px,3.2vw,32px);color:var(--white);line-height:1.6;
+}
+.why-turn .big .hl{color:var(--gold);}
+
+/* =========================================================
+   課程亮點
+   ========================================================= */
+.benefit-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.benefit{
+  background:#fff;border-radius:16px;padding:34px 28px;
+  border:1px solid var(--cloud);transition:.3s ease;
+}
+.benefit:hover{
+  transform:translateY(-7px);
+  box-shadow:0 26px 44px -26px rgba(26,61,99,.5);
+  border-color:rgba(224,162,53,.5);
+}
+.benefit .ic{
+  width:54px;height:54px;border-radius:14px;
+  background:var(--navy);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:18px;
+}
+.benefit .ic svg{width:27px;height:27px;}
+.benefit .no{
+  font-family:var(--mono);font-size:12px;font-weight:700;
+  color:var(--sky);letter-spacing:.12em;margin-bottom:6px;
+}
+.benefit h3{
+  font-family:var(--serif);font-weight:700;font-size:19.5px;
+  color:var(--navy);margin-bottom:10px;letter-spacing:.03em;
+}
+.benefit p{font-size:14.5px;color:#5b6066;font-weight:300;}
+
+/* =========================================================
+   議程
+   ========================================================= */
+.agenda{background:linear-gradient(180deg,var(--navy) 0%,var(--ink) 100%);color:var(--white);}
+.agenda .sec-title{color:var(--white);}
+.agenda .sec-head .eyebrow{color:var(--gold);}
+.agenda-note{
+  text-align:center;font-size:13px;color:rgba(251,249,243,.55);
+  margin-top:-34px;margin-bottom:42px;
+}
+.timeline{max-width:760px;margin:0 auto;position:relative;}
+.timeline::before{
+  content:"";position:absolute;left:97px;top:8px;bottom:8px;width:2px;
+  background:rgba(94,140,181,.4);
+}
+.tl-item{
+  display:grid;grid-template-columns:84px 1fr;gap:26px;
+  padding:13px 0;position:relative;
+}
+.tl-time{
+  font-family:var(--mono);font-weight:700;font-size:14px;
+  color:var(--gold);text-align:right;padding-top:13px;
+}
+.tl-body{
+  background:rgba(251,249,243,.05);
+  border:1px solid rgba(251,249,243,.12);
+  border-radius:12px;padding:15px 20px;position:relative;
+}
+.tl-body::before{
+  content:"";position:absolute;left:-32px;top:20px;
+  width:13px;height:13px;border-radius:50%;
+  background:var(--navy);border:3px solid var(--sky);
+}
+.tl-item.key .tl-body{
+  background:rgba(224,162,53,.12);border-color:rgba(224,162,53,.4);
+}
+.tl-item.key .tl-body::before{border-color:var(--gold);background:var(--gold);}
+.tl-body h4{
+  font-family:var(--serif);font-weight:700;font-size:17px;
+  color:var(--white);letter-spacing:.03em;margin-bottom:3px;
+}
+.tl-body p{font-size:13.5px;color:rgba(251,249,243,.72);font-weight:300;}
+.tl-tag{
+  display:inline-block;font-family:var(--mono);font-size:10px;
+  font-weight:700;letter-spacing:.1em;color:var(--ink);
+  background:var(--gold);padding:2px 9px;border-radius:4px;margin-left:8px;
+}
+.tl-item.break .tl-body{background:transparent;border-style:dashed;}
+.tl-item.break h4{font-size:14px;color:rgba(251,249,243,.6);font-weight:400;font-family:var(--sans);}
+
+/* =========================================================
+   講師
+   ========================================================= */
+.speaker-grid{
+  display:grid;grid-template-columns:.78fr 1.22fr;gap:48px;align-items:center;
+}
+.speaker-photo{
+  background:linear-gradient(155deg,var(--navy),var(--ink));
+  border-radius:20px;padding:30px;text-align:center;position:relative;
+  overflow:hidden;
+}
+.speaker-photo .light{
+  position:absolute;top:-140px;right:-140px;width:340px;height:340px;
+  background:repeating-conic-gradient(from 0deg,
+    rgba(224,162,53,.22) 0deg 9deg,transparent 9deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);
+          mask:radial-gradient(circle,#000 30%,transparent 70%);
+}
+.avatar{
+  width:170px;height:170px;border-radius:50%;margin:14px auto 20px;
+  background:var(--cloud);position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:center;
+  border:5px solid rgba(224,162,53,.55);
+  font-family:var(--serif);font-weight:900;font-size:58px;color:var(--navy);
+}
+.speaker-photo .sp-name{
+  position:relative;z-index:2;
+  font-family:var(--serif);font-weight:900;font-size:25px;
+  color:var(--white);letter-spacing:.08em;
+}
+.speaker-photo .sp-role{
+  position:relative;z-index:2;
+  font-size:13.5px;color:var(--gold);font-weight:500;
+  letter-spacing:.06em;margin-top:5px;
+}
+.speaker-photo .sp-en{
+  position:relative;z-index:2;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  color:rgba(251,249,243,.5);margin-top:8px;
+}
+.speaker-info h3{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(22px,3vw,28px);color:var(--navy);
+  line-height:1.6;letter-spacing:.04em;margin-bottom:6px;
+}
+.speaker-info .gold-line{margin:16px 0 20px;}
+.speaker-info p{font-size:15px;color:#4f555b;margin-bottom:14px;}
+.sp-creds{list-style:none;margin-top:8px;}
+.sp-creds li{
+  display:flex;gap:11px;font-size:14.5px;padding:7px 0;color:var(--graphite);
+}
+.sp-creds li::before{
+  content:"";flex:none;width:8px;height:8px;border-radius:2px;
+  background:var(--gold);margin-top:9px;
+}
+.sp-quote{
+  margin-top:22px;border-left:3px solid var(--gold);
+  padding:6px 0 6px 20px;
+  font-family:var(--serif);font-weight:700;font-size:16.5px;
+  color:var(--navy);line-height:1.85;
+}
+
+/* =========================================================
+   學員回饋
+   ========================================================= */
+.voices{background:linear-gradient(180deg,#f3f1ea,#fff);}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.voice{
+  background:#fff;border-radius:16px;padding:30px 26px;
+  border:1px solid var(--cloud);position:relative;
+}
+.voice .mark{
+  font-family:var(--serif);font-weight:900;font-size:58px;
+  color:rgba(224,162,53,.32);line-height:.6;margin-bottom:8px;
+}
+.voice p{font-size:14.5px;color:#4f555b;margin-bottom:18px;}
+.voice .who{
+  display:flex;align-items:center;gap:11px;
+  border-top:1px solid var(--cloud);padding-top:14px;
+}
+.voice .who .av{
+  width:38px;height:38px;border-radius:50%;flex:none;
+  background:var(--navy);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--serif);font-weight:700;font-size:16px;
+}
+.voice .who .meta b{font-size:14px;color:var(--navy);display:block;}
+.voice .who .meta span{font-size:12px;color:#868b90;}
+.stars{color:var(--gold);font-size:13px;letter-spacing:2px;margin-bottom:10px;}
+
+/* =========================================================
+   報名資訊
+   ========================================================= */
+.info-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:46px;}
+.info-card{
+  background:#fff;border:1px solid var(--cloud);border-radius:14px;
+  padding:26px 22px;text-align:center;
+}
+.info-card .ic{
+  width:46px;height:46px;border-radius:12px;margin:0 auto 14px;
+  background:rgba(26,61,99,.07);color:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+}
+.info-card .ic svg{width:23px;height:23px;}
+.info-card .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;
+  color:var(--sky);font-weight:600;margin-bottom:6px;
+}
+.info-card .big{
+  font-family:var(--serif);font-weight:900;font-size:19px;
+  color:var(--navy);letter-spacing:.03em;
+}
+.info-card .small{font-size:12.5px;color:#868b90;margin-top:3px;}
+
+/* 價格 */
+.price-box{
+  background:linear-gradient(150deg,var(--navy),var(--ink));
+  border-radius:20px;padding:46px 40px;color:var(--white);
+  display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center;
+  position:relative;overflow:hidden;
+}
+.price-box .light{
+  position:absolute;top:-160px;right:-120px;width:400px;height:400px;
+  background:repeating-conic-gradient(from 0deg,
+    rgba(224,162,53,.2) 0deg 9deg,transparent 9deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);
+          mask:radial-gradient(circle,#000 30%,transparent 70%);
+}
+.price-left{position:relative;z-index:2;}
+.price-left .eyebrow{color:var(--gold);margin-bottom:10px;}
+.price-left h3{
+  font-family:var(--serif);font-weight:900;font-size:24px;
+  color:var(--white);letter-spacing:.04em;margin-bottom:14px;
+}
+.price-left ul{list-style:none;}
+.price-left li{
+  font-size:14.5px;color:rgba(251,249,243,.85);
+  padding:5px 0;display:flex;gap:10px;font-weight:300;
+}
+.price-left li::before{content:"✓";color:var(--gold);font-weight:700;}
+.price-right{
+  position:relative;z-index:2;text-align:center;
+  background:rgba(251,249,243,.07);
+  border:1px solid rgba(224,162,53,.35);border-radius:16px;padding:28px 24px;
+}
+.price-right .early{
+  display:inline-block;background:var(--gold);color:var(--ink);
+  font-size:12px;font-weight:700;letter-spacing:.06em;
+  padding:4px 14px;border-radius:50px;margin-bottom:12px;
+}
+.price-right .strike{
+  font-size:15px;color:rgba(251,249,243,.5);
+  text-decoration:line-through;font-family:var(--mono);
+}
+.price-right .now{
+  font-family:var(--mono);font-weight:700;
+  font-size:46px;color:var(--gold);line-height:1.1;margin:2px 0;
+}
+.price-right .now small{font-size:20px;}
+.price-right .deadline{font-size:12.5px;color:rgba(251,249,243,.7);margin-top:6px;}
+
+/* =========================================================
+   報名表單
+   ========================================================= */
+.form-sec{background:linear-gradient(180deg,#f3f1ea,#ece9e0);}
+.form-wrap{
+  max-width:780px;margin:0 auto;
+  background:#fff;border-radius:22px;
+  box-shadow:0 40px 70px -40px rgba(26,61,99,.5);
+  overflow:hidden;
+}
+.form-top{
+  background:linear-gradient(150deg,var(--navy),var(--ink));
+  color:var(--white);padding:34px 40px;position:relative;overflow:hidden;
+}
+.form-top .light{
+  position:absolute;top:-120px;right:-110px;width:300px;height:300px;
+  background:repeating-conic-gradient(from 0deg,
+    rgba(224,162,53,.2) 0deg 9deg,transparent 9deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 30%,transparent 70%);
+          mask:radial-gradient(circle,#000 30%,transparent 70%);
+}
+.form-top h3{
+  font-family:var(--serif);font-weight:900;font-size:24px;
+  letter-spacing:.04em;position:relative;z-index:2;
+}
+.form-top p{
+  font-size:14px;color:rgba(251,249,243,.8);font-weight:300;
+  margin-top:6px;position:relative;z-index:2;
+}
+form{padding:36px 40px 40px;}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.f-group{margin-bottom:20px;}
+.f-group label{
+  display:block;font-size:14px;font-weight:500;
+  color:var(--navy);margin-bottom:7px;letter-spacing:.03em;
+}
+.f-group label .req{color:#c0392b;margin-left:3px;}
+.f-group input,
+.f-group select,
+.f-group textarea{
+  width:100%;font-family:var(--sans);font-size:15px;
+  padding:12px 14px;border:1.5px solid var(--cloud);
+  border-radius:10px;background:var(--white);color:var(--graphite);
+  transition:.2s;
+}
+.f-group input:focus,
+.f-group select:focus,
+.f-group textarea:focus{
+  outline:none;border-color:var(--gold);
+  box-shadow:0 0 0 3px rgba(224,162,53,.16);
+}
+.f-group textarea{resize:vertical;min-height:88px;}
+.f-group .err{color:#c0392b;font-size:12.5px;margin-top:5px;display:none;}
+.f-group.invalid input,
+.f-group.invalid select{border-color:#c0392b;}
+.f-group.invalid .err{display:block;}
+.f-check{
+  display:flex;gap:11px;align-items:flex-start;
+  background:#f7f5ef;border-radius:10px;padding:14px 16px;margin-bottom:24px;
+}
+.f-check input{width:18px;height:18px;flex:none;margin-top:3px;accent-color:var(--navy);}
+.f-check label{font-size:13.5px;color:#5b6066;line-height:1.7;}
+.f-check a{color:var(--navy);font-weight:700;text-decoration:underline;}
+.form-submit{width:100%;justify-content:center;font-size:17px;padding:17px;}
+.form-foot{
+  text-align:center;font-size:12.5px;color:#868b90;margin-top:16px;line-height:1.8;
+}
+
+/* 成功 modal */
+.modal{
+  position:fixed;inset:0;z-index:200;display:none;
+  align-items:center;justify-content:center;padding:24px;
+  background:rgba(14,42,69,.78);backdrop-filter:blur(4px);
+}
+.modal.show{display:flex;}
+.modal-card{
+  background:#fff;border-radius:20px;max-width:440px;width:100%;
+  padding:44px 36px;text-align:center;
+  animation:pop .35s ease;
+}
+@keyframes pop{from{transform:scale(.88);opacity:0;}to{transform:scale(1);opacity:1;}}
+.modal-card .check{
+  width:78px;height:78px;border-radius:50%;margin:0 auto 20px;
+  background:rgba(224,162,53,.16);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+}
+.modal-card .check svg{width:40px;height:40px;}
+.modal-card h3{
+  font-family:var(--serif);font-weight:900;font-size:23px;
+  color:var(--navy);margin-bottom:10px;letter-spacing:.04em;
+}
+.modal-card p{font-size:14.5px;color:#5b6066;margin-bottom:24px;}
+.modal-card .btn{padding:13px 34px;}
+
+/* =========================================================
+   FAQ
+   ========================================================= */
+.faq-list{max-width:780px;margin:0 auto;}
+.faq-item{
+  background:#fff;border:1px solid var(--cloud);
+  border-radius:13px;margin-bottom:14px;overflow:hidden;
+}
+.faq-q{
+  display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 24px;cursor:pointer;
+}
+.faq-q h4{
+  font-family:var(--serif);font-weight:700;font-size:16.5px;
+  color:var(--navy);letter-spacing:.03em;
+}
+.faq-q .pm{
+  flex:none;width:28px;height:28px;border-radius:50%;
+  background:var(--navy);color:var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;font-weight:700;transition:.3s;
+}
+.faq-item.open .pm{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;overflow:hidden;transition:max-height .35s ease;
+}
+.faq-a p{
+  padding:0 24px 22px;font-size:14.5px;color:#5b6066;font-weight:300;
+}
+
+/* =========================================================
+   結尾 CTA
+   ========================================================= */
+.final{
+  background:linear-gradient(150deg,var(--navy),var(--ink));
+  color:var(--white);padding:90px 0;text-align:center;
+  overflow:hidden;
+}
+.final .light{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:760px;height:760px;
+  background:repeating-conic-gradient(from 0deg,
+    rgba(224,162,53,.13) 0deg 9deg,transparent 9deg 18deg);
+  -webkit-mask:radial-gradient(circle,#000 22%,transparent 62%);
+          mask:radial-gradient(circle,#000 22%,transparent 62%);
+}
+.final .inner{position:relative;z-index:2;}
+.final .eyebrow{color:var(--gold);margin-bottom:16px;}
+.final h2{
+  font-family:var(--serif);font-weight:900;
+  font-size:clamp(26px,4vw,40px);line-height:1.55;
+  letter-spacing:.04em;margin-bottom:14px;
+}
+.final h2 .hl{color:var(--gold);}
+.final p{
+  font-size:16px;color:rgba(251,249,243,.82);font-weight:300;
+  margin-bottom:30px;
+}
+.final .motto{
+  font-family:var(--serif);font-weight:700;font-size:15px;
+  color:var(--sky);margin-top:26px;letter-spacing:.06em;
+}
+
+/* =========================================================
+   頁尾
+   ========================================================= */
+footer{background:var(--ink);color:rgba(251,249,243,.62);padding:50px 0 26px;}
+.foot-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;
+  padding-bottom:32px;border-bottom:1px solid rgba(251,249,243,.12);
+}
+.foot-brand .brand{margin-bottom:14px;}
+.foot-brand p{font-size:13.5px;font-weight:300;max-width:300px;line-height:1.9;}
+.foot-col h5{
+  font-family:var(--serif);font-weight:700;font-size:15px;
+  color:var(--white);margin-bottom:14px;letter-spacing:.05em;
+}
+.foot-col a,.foot-col p{
+  display:block;font-size:13.5px;color:rgba(251,249,243,.62);
+  margin-bottom:9px;font-weight:300;transition:.2s;
+}
+.foot-col a:hover{color:var(--gold);}
+.foot-bottom{
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;
+  padding-top:22px;font-size:12.5px;color:rgba(251,249,243,.42);
+}
+.foot-bottom .motto{color:var(--gold);font-weight:500;}
+
+/* =========================================================
+   浮動報名鈕（手機）
+   ========================================================= */
+.float-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  background:rgba(26,61,99,.98);padding:11px 16px;
+  display:none;align-items:center;justify-content:space-between;gap:12px;
+  box-shadow:0 -6px 22px -10px rgba(0,0,0,.5);
+}
+.float-cta .fc-text{line-height:1.3;}
+.float-cta .fc-text b{color:var(--white);font-size:14px;display:block;}
+.float-cta .fc-text span{color:var(--sky);font-size:11.5px;}
+.float-cta .btn{padding:12px 24px;font-size:14.5px;}
+
+/* =========================================================
+   RWD
+   ========================================================= */
+@media(max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:40px;}
+  .speaker-grid{grid-template-columns:1fr;gap:32px;}
+  .pain-grid,.benefit-grid,.voice-grid{grid-template-columns:1fr 1fr;}
+  .info-grid{grid-template-columns:1fr 1fr;}
+  .price-box{grid-template-columns:1fr;gap:28px;}
+}
+@media(max-width:680px){
+  .nav-links{
+    position:fixed;top:74px;left:0;right:0;
+    background:rgba(26,61,99,.99);flex-direction:column;
+    gap:0;padding:10px 0;
+    transform:translateY(-130%);transition:.35s ease;
+    box-shadow:0 14px 26px -14px rgba(0,0,0,.6);
+  }
+  .nav-links.open{transform:translateY(0);}
+  .nav-links a{padding:13px 24px;width:100%;border-bottom:1px solid rgba(251,249,243,.08);}
+  .nav-links .nav-cta{margin:10px 24px;text-align:center;}
+  .burger{display:flex;}
+  .pain-grid,.benefit-grid,.voice-grid,.info-grid{grid-template-columns:1fr;}
+  .f-row{grid-template-columns:1fr;gap:0;}
+  .section{padding:64px 0;}
+  .hero{padding:120px 0 70px;}
+  .trust-row{gap:28px;}
+  .timeline::before{left:67px;}
+  .tl-item{grid-template-columns:58px 1fr;gap:18px;}
+  .tl-time{font-size:12px;}
+  .tl-body::before{left:-25px;}
+  form,.form-top{padding-left:24px;padding-right:24px;}
+  .float-cta{display:flex;}
+  body{padding-bottom:66px;}
+  .foot-grid{grid-template-columns:1fr;gap:26px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== 導覽列 ===================== -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="白袍人生學院">
+      <svg class="logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="11" fill="#1A3D63"/>
+        <g stroke="#E0A235" stroke-width="2" stroke-linecap="round">
+          <line x1="24" y1="9" x2="24" y2="15"/>
+          <line x1="35" y1="13" x2="31" y2="17.5"/>
+          <line x1="13" y1="13" x2="17" y2="17.5"/>
+          <line x1="38" y1="24" x2="32.5" y2="24"/>
+          <line x1="10" y1="24" x2="15.5" y2="24"/>
+        </g>
+        <path d="M14 36 A10 10 0 0 1 34 36" fill="none" stroke="#E0A235" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="24" cy="36" r="3.4" fill="#FBF9F3"/>
+      </svg>
+      <span class="brand-text">
+        <span class="zh">白袍人生學院</span><br>
+        <span class="en">WHITE COAT LIFE ACADEMY</span>
+      </span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#why">課程緣起</a>
+      <a href="#benefit">課程亮點</a>
+      <a href="#agenda">課程議程</a>
+      <a href="#speaker">講師介紹</a>
+      <a href="#voices">學員回饋</a>
+      <a href="#faq">常見問題</a>
+      <a href="#register" class="nav-cta">立即報名</a>
+    </nav>
+    <div class="burger" id="burger" aria-label="選單">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="top">
+  <div class="light"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <span class="host-tag"><span class="dot"></span>白袍人生學院 主辦・陳昱傑醫師主講</span>
+      <h1>讓你的專業<br>被 AI 看見，<br>被病人<span class="hl">主動找到</span></h1>
+      <p class="sub">
+        AI 搜尋時代已經來了。<br>
+        病人問的不再是 Google，而是 <b>ChatGPT、Perplexity、Gemini</b>。<br>
+        這一天，我們一起把你的專業，變成 AI 願意推薦的答案。
+      </p>
+      <div class="fact-row">
+        <div class="fact"><div class="k">DATE</div><div class="v">8 / 30（日）</div></div>
+        <div class="fact"><div class="k">TIME</div><div class="v">09:00–17:00</div></div>
+        <div class="fact"><div class="k">VENUE</div><div class="v">台北・實體課程</div></div>
+        <div class="fact"><div class="k">FORMAT</div><div class="v">小班實作</div></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#register" class="btn btn-gold">立即報名 8/30 場次 →</a>
+        <a href="#benefit" class="btn btn-ghost">看課程內容</a>
+      </div>
+      <p class="seats-note">繼 <b>5/17 大型 AIEO 講座</b> 滿場好評後，深化實作班・<b>限額 60 名</b></p>
+    </div>
+
+    <!-- 右側資訊卡 -->
+    <div class="hero-card">
+      <span class="ribbon">2026 秋季班</span>
+      <h3>AIEO 醫師內容力<br>實戰工作坊</h3>
+      <div class="course-en">AI ENGINE OPTIMIZATION FOR DOCTORS</div>
+      <ul class="hc-list">
+        <li><span class="ic">日</span><span><span class="lbl">課程日期</span><br><span class="val">2026 / 8 / 30（日）</span></span></li>
+        <li><span class="ic">師</span><span><span class="lbl">主講講師</span><br><span class="val">陳昱傑 醫師</span></span></li>
+        <li><span class="ic">人</span><span><span class="lbl">招生對象</span><br><span class="val">想經營個人品牌的醫師</span></span></li>
+        <li><span class="ic">額</span><span><span class="lbl">名額限制</span><br><span class="val">限額 60 名（額滿截止）</span></span></li>
+      </ul>
+      <div class="countdown-mini">
+        <div class="cd-label">距離開課還有</div>
+        <div class="cd-units" id="cd">
+          <div class="cd-unit"><div class="num" id="cd-d">--</div><div class="u">天</div></div>
+          <div class="cd-unit"><div class="num" id="cd-h">--</div><div class="u">時</div></div>
+          <div class="cd-unit"><div class="num" id="cd-m">--</div><div class="u">分</div></div>
+          <div class="cd-unit"><div class="num" id="cd-s">--</div><div class="u">秒</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 信任條 ===================== -->
+<section class="trust">
+  <div class="wrap trust-row">
+    <div class="trust-item"><div class="n">5/17</div><div class="t">大型 AIEO 講座滿場</div></div>
+    <div class="trust-item"><div class="n">60</div><div class="t">本場小班實作名額</div></div>
+    <div class="trust-item"><div class="n">1 天</div><div class="t">從觀念到實作完整建構</div></div>
+    <div class="trust-item"><div class="n">∞</div><div class="t">課後社群持續交流</div></div>
+  </div>
+</section>
+
+<!-- ===================== 為什麼要學 ===================== -->
+<section class="section why" id="why">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">WHY AIEO</div>
+      <h2 class="sec-title">為什麼<span class="hl">現在</span>，醫師一定要懂 AIEO</h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="center reveal">
+      <p class="pain-lead">
+        很多醫師會問我——<br>
+        「我認真看診，<br>為什麼還要經營內容？」
+      </p>
+      <p style="max-width:620px;margin:0 auto;color:#5b6066;font-weight:300;">
+        因為病人找答案的方式，已經變了。<br>
+        他們不再翻到第二頁，<br>他們只看 AI 給的那一段話。
+      </p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="q">▋ 寫了很多，卻沒人看見</div>
+        <p>你經營了粉專、寫了衛教文。但 AI 回答病人問題時，引用的卻是別人。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">▋ 不知道 AI 怎麼挑內容</div>
+        <p>ChatGPT、Perplexity 推薦誰、不推薦誰？背後是有邏輯的——只是沒人教過你。</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="q">▋ 想做品牌，卻沒方法</div>
+        <p>你知道個人品牌很重要。但「具體第一步該做什麼」，始終沒有答案。</p>
+      </div>
+    </div>
+
+    <div class="why-turn reveal">
+      <div class="light"></div>
+      <p class="small">OUR POINT OF VIEW</p>
+      <p class="big">
+        在醫學院，我們學會了醫療。<br>
+        卻沒有人教我們——<br>
+        如何讓專業，<span class="hl">被這個時代看見</span>。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 課程亮點 ===================== -->
+<section class="section alt" id="benefit">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">WHAT YOU GET</div>
+      <h2 class="sec-title">這一天，你會帶走<span class="hl">六件事</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="benefit-grid">
+      <div class="benefit reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg></div>
+        <div class="no">MODULE 01</div>
+        <h3>看懂 AI 搜尋邏輯</h3>
+        <p>AI 引擎如何理解、挑選、推薦一段醫療內容？先看懂規則，才知道怎麼贏。</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v13.5"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div>
+        <div class="no">MODULE 02</div>
+        <h3>會被推薦的內容架構</h3>
+        <p>同樣的專業，換個寫法，AI 就願意引用。掌握醫療內容的結構化原則。</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="3.2"/></svg></div>
+        <div class="no">MODULE 03</div>
+        <h3>AI 協作工作流</h3>
+        <p>把繁瑣的產出交給 AI，你專注在最高價值的專業判斷。一套可複製的 SOP。</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7"/></svg></div>
+        <div class="no">MODULE 04</div>
+        <h3>醫師個人品牌定位</h3>
+        <p>你不是要變網紅。是要讓對的病人，在對的時刻，找到對的你。</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-5 4 3 5-7"/></svg></div>
+        <div class="no">MODULE 05</div>
+        <h3>現場實作・帶著成果走</h3>
+        <p>不是聽完就忘。當天動手做出你自己的 AIEO 內容初稿，助教在旁協助。</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.8M16 3.1A4 4 0 0 1 16 11"/></svg></div>
+        <div class="no">MODULE 06</div>
+        <h3>課後社群・持續同行</h3>
+        <p>一個人走得快，一群人走得遠。加入學員社群，讓你的下一步不孤單。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 議程 ===================== -->
+<section class="section agenda" id="agenda">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">AGENDA</div>
+      <h2 class="sec-title">一日課程・完整流程</h2>
+      <div class="gold-line"></div>
+    </div>
+    <p class="agenda-note">＊ 以下為課程預定流程，實際內容與時間以開課前正式公告為準</p>
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-time">09:00</div>
+        <div class="tl-body"><h4>學員報到・領取課程資料</h4><p>提早入場，與夥伴交流暖身。</p></div>
+      </div>
+      <div class="tl-item key reveal">
+        <div class="tl-time">09:30</div>
+        <div class="tl-body"><h4>AIEO 是什麼？AI 時代的醫師機會<span class="tl-tag">觀念</span></h4><p>從搜尋到 AI 推薦，醫療內容的遊戲規則如何改變。</p></div>
+      </div>
+      <div class="tl-item break reveal">
+        <div class="tl-time">10:40</div>
+        <div class="tl-body"><h4>休息・交流</h4></div>
+      </div>
+      <div class="tl-item key reveal">
+        <div class="tl-time">10:55</div>
+        <div class="tl-body"><h4>拆解：AI 引擎如何挑選醫療內容<span class="tl-tag">核心</span></h4><p>可信度、結構、權威訊號——逐項拆給你看。</p></div>
+      </div>
+      <div class="tl-item break reveal">
+        <div class="tl-time">12:00</div>
+        <div class="tl-body"><h4>午餐・休息</h4></div>
+      </div>
+      <div class="tl-item key reveal">
+        <div class="tl-time">13:00</div>
+        <div class="tl-body"><h4>實作 I：打造會被 AI 推薦的內容<span class="tl-tag">實作</span></h4><p>動手寫出你自己的第一份 AIEO 內容架構。</p></div>
+      </div>
+      <div class="tl-item break reveal">
+        <div class="tl-time">14:30</div>
+        <div class="tl-body"><h4>休息・交流</h4></div>
+      </div>
+      <div class="tl-item key reveal">
+        <div class="tl-time">14:45</div>
+        <div class="tl-body"><h4>實作 II：個人品牌 × AIEO 整合策略<span class="tl-tag">實作</span></h4><p>把單篇內容，串成一條完整的品牌路徑。</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-time">16:00</div>
+        <div class="tl-body"><h4>Q&amp;A・你的 90 天行動計畫</h4><p>帶著一份清楚的下一步，離開教室。</p></div>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-time">16:50</div>
+        <div class="tl-body"><h4>結語・課後社群說明</h4><p>一群人一起走，後面會更快。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 講師 ===================== -->
+<section class="section" id="speaker">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">YOUR INSTRUCTOR</div>
+      <h2 class="sec-title">主講講師</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="speaker-grid">
+      <div class="speaker-photo reveal">
+        <div class="light"></div>
+        <!-- 可換成講師實際照片：將下方 .avatar 替換為 <img> -->
+        <div class="avatar">陳</div>
+        <div class="sp-name">陳昱傑 醫師</div>
+        <div class="sp-role">AIEO 醫療內容策略講師</div>
+        <div class="sp-en">DR. CHEN YU-CHIEH</div>
+      </div>
+      <div class="speaker-info reveal">
+        <h3>把專業，<br>變成這個時代<span style="color:var(--gold)">找得到</span>的答案</h3>
+        <div class="gold-line"></div>
+        <p>
+          陳昱傑醫師長期投入「AI 時代醫療內容」的研究與實作，
+          擅長把艱澀的 AI 搜尋邏輯，拆解成醫師一聽就懂、回去就能用的方法。
+        </p>
+        <ul class="sp-creds">
+          <li>2026 / 5 / 17 大型 AIEO 實體講座主講人，現場滿場、網路好評不斷</li>
+          <li>專注醫療內容的 AIEO（AI Engine Optimization）策略與實作教學</li>
+          <li>協助多位醫師建立「被 AI 看見」的個人品牌內容</li>
+          <li>白袍人生學院特約講師</li>
+        </ul>
+        <!-- 講師詳細學經歷、現職、專科，待陳昱傑醫師確認後補上 -->
+        <div class="sp-quote">
+          「內容不是寫給演算法看的，<br>是寫給那個正在 AI 上找答案的病人看的。」
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 學員回饋 ===================== -->
+<section class="section voices" id="voices">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">VOICES FROM 5/17</div>
+      <h2 class="sec-title">5/17 場學員，<span class="hl">這樣說</span></h2>
+      <div class="gold-line"></div>
+    </div>
+    <!-- 以下為示意回饋，建議替換為 5/17 場真實學員回饋 -->
+    <div class="voice-grid">
+      <div class="voice reveal">
+        <div class="mark">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p>原本以為 AIEO 很難，聽完才發現是「方法問題」。回去當天就改了我衛教文的寫法。</p>
+        <div class="who">
+          <div class="av">主</div>
+          <div class="meta"><b>一位家醫科主治醫師</b><span>參加 5/17 AIEO 講座</span></div>
+        </div>
+      </div>
+      <div class="voice reveal">
+        <div class="mark">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p>講師把抽象的東西講得很具體。最有感的是——終於知道我的內容「為什麼沒被看見」。</p>
+        <div class="who">
+          <div class="av">診</div>
+          <div class="meta"><b>一位診所經營醫師</b><span>參加 5/17 AIEO 講座</span></div>
+        </div>
+      </div>
+      <div class="voice reveal">
+        <div class="mark">&ldquo;</div>
+        <div class="stars">★★★★★</div>
+        <p>很期待這次的實作班。上次是觀念，這次可以實際動手做出成果，太值得了。</p>
+        <div class="who">
+          <div class="av">牙</div>
+          <div class="meta"><b>一位牙科醫師</b><span>參加 5/17 AIEO 講座</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 報名資訊 ===================== -->
+<section class="section alt">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">COURSE INFO</div>
+      <h2 class="sec-title">報名資訊一次看懂</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+        <div class="lbl">DATE</div>
+        <div class="big">8 / 30（日）</div>
+        <div class="small">2026 年・09:00–17:00</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg></div>
+        <div class="lbl">VENUE</div>
+        <div class="big">台北市</div>
+        <div class="small">實體課程・場地確認中</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9.5" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.8"/></svg></div>
+        <div class="lbl">SEATS</div>
+        <div class="big">限額 60 名</div>
+        <div class="small">小班實作・額滿截止</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7H4a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"/><path d="M2 11h20M7 15h4"/></svg></div>
+        <div class="lbl">TUITION</div>
+        <div class="big">早鳥優惠</div>
+        <div class="small">名額有限・報名從速</div>
+      </div>
+    </div>
+
+    <!-- 價格 ：金額為暫定示意，請依實際定價調整 -->
+    <div class="price-box reveal">
+      <div class="light"></div>
+      <div class="price-left">
+        <div class="eyebrow">學費包含</div>
+        <h3>一張入場券，<br>一整天的方法</h3>
+        <ul>
+          <li>一日完整課程（含觀念與兩段實作）</li>
+          <li>課程實作講義與 AIEO 工具清單</li>
+          <li>現場助教協助・當天產出個人內容初稿</li>
+          <li>課後學員社群・持續交流與資源共享</li>
+          <li>午餐與課間茶點</li>
+        </ul>
+      </div>
+      <div class="price-right">
+        <span class="early">早鳥優惠價</span>
+        <div class="strike">原價 NT$ 12,800</div>
+        <div class="now"><small>NT$</small> 9,800</div>
+        <div class="deadline">＊ 金額為暫定，請依正式公告為準</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 報名表單 ===================== -->
+<section class="section form-sec" id="register">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">REGISTRATION</div>
+      <h2 class="sec-title">線上報名・<span class="hl">8/30 場次</span></h2>
+      <div class="gold-line"></div>
+    </div>
+
+    <div class="form-wrap reveal">
+      <div class="form-top">
+        <div class="light"></div>
+        <h3>AIEO 醫師內容力實戰工作坊・報名表</h3>
+        <p>填寫後，白袍人生學院承辦人員將於 1–2 個工作天內與你聯繫確認。</p>
+      </div>
+      <form id="regForm" novalidate>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="name">姓名<span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="請輸入真實姓名" />
+            <div class="err">請填寫姓名</div>
+          </div>
+          <div class="f-group">
+            <label for="phone">手機號碼<span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="09xx-xxx-xxx" />
+            <div class="err">請填寫正確的手機號碼</div>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="email">Email<span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" />
+            <div class="err">請填寫正確的 Email</div>
+          </div>
+          <div class="f-group">
+            <label for="identity">身份別<span class="req">*</span></label>
+            <select id="identity" name="identity">
+              <option value="">請選擇</option>
+              <option>主治醫師</option>
+              <option>住院醫師 / PGY</option>
+              <option>牙醫師</option>
+              <option>中醫師</option>
+              <option>醫學生</option>
+              <option>其他醫療專業人員</option>
+              <option>其他</option>
+            </select>
+            <div class="err">請選擇身份別</div>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label for="org">服務院所 / 單位</label>
+            <input type="text" id="org" name="org" placeholder="例：○○醫院 / ○○診所" />
+          </div>
+          <div class="f-group">
+            <label for="dept">科別 / 專長</label>
+            <input type="text" id="dept" name="dept" placeholder="例：耳鼻喉科、家醫科…" />
+          </div>
+        </div>
+        <div class="f-group">
+          <label for="source">你從哪裡得知這堂課？</label>
+          <select id="source" name="source">
+            <option value="">請選擇</option>
+            <option>白袍人生學院社群 / 粉專</option>
+            <option>5/17 AIEO 講座</option>
+            <option>朋友 / 同事推薦</option>
+            <option>Facebook / Instagram</option>
+            <option>Threads</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="f-group">
+          <label for="goal">你最想在這堂課解決的一個問題？</label>
+          <textarea id="goal" name="goal" placeholder="寫下來，講師會盡量在課程中回應。"></textarea>
+        </div>
+        <div class="f-check">
+          <input type="checkbox" id="agree" name="agree" />
+          <label for="agree">
+            我已閱讀並同意，本表單所填資料僅供白袍人生學院作為本課程報名聯繫與通知之用，
+            不會用於其他用途。<span class="req">*</span>
+          </label>
+        </div>
+        <div class="f-group" style="margin-bottom:8px;">
+          <div class="err" id="agreeErr" style="margin-top:0;">請勾選同意後再送出</div>
+        </div>
+        <button type="submit" class="btn btn-gold form-submit">送出報名表 →</button>
+        <p class="form-foot">
+          送出後如未收到回覆，歡迎來信 <b>白袍人生學院</b>：drchang.ent33@gmail.com<br>
+          名額有限，依完成報名與繳費順序為準。
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="sec-title">常見問題</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q"><h4>我完全沒接觸過 AI 工具，跟得上嗎？</h4><div class="pm">+</div></div>
+        <div class="faq-a"><p>可以。這堂課是為「臨床很忙、但想開始」的醫師設計的。我們從觀念講起，再帶你一步步動手，現場有助教協助，不需要任何技術背景。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><h4>我參加過 5/17 的講座了，這場有什麼不同？</h4><div class="pm">+</div></div>
+        <div class="faq-a"><p>5/17 是大型講座，建立的是「觀念與視野」。8/30 是小班實作工作坊，重點是「動手做出成果」。當天你會帶著自己的 AIEO 內容初稿離開。兩場互補，沒參加過 5/17 也完全能上。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><h4>非西醫（牙醫、中醫）或醫學生可以報名嗎？</h4><div class="pm">+</div></div>
+        <div class="faq-a"><p>歡迎。白袍人生學院本就是橫跨中醫、西醫、牙醫的共學平台。只要你想讓自己的專業被更多人看見，這堂課都適合你。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><h4>報名後如何完成繳費？</h4><div class="pm">+</div></div>
+        <div class="faq-a"><p>送出本表單後，承辦人員會在 1–2 個工作天內與你聯繫，提供繳費方式與後續說明。完成繳費才算完成報名，名額依繳費順序保留。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><h4>如果報名後不能參加，可以退費或轉讓嗎？</h4><div class="pm">+</div></div>
+        <div class="faq-a"><p>可以。詳細的退費與轉讓辦法，承辦人員會在確認報名時一併說明。如有任何狀況，歡迎提早與我們聯繫。</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q"><h4>課程地點在哪裡？</h4><div class="pm">+</div></div>
+        <div class="faq-a"><p>課程於台北市實體舉行，確切場地將於開課前正式公告，並以 Email 通知所有已報名學員。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== 結尾 CTA ===================== -->
+<section class="final">
+  <div class="light"></div>
+  <div class="wrap inner">
+    <div class="eyebrow">JOIN US ON 8/30</div>
+    <h2>你的專業已經夠好了。<br>現在，<span class="hl">讓它被看見</span>。</h2>
+    <p>名額有限，留一個位子給願意往前走的你。</p>
+    <a href="#register" class="btn btn-gold">立即報名 8/30 場次 →</a>
+    <p class="motto">一個人，走比較快；一群人一起，走得更遠。</p>
+  </div>
+</section>
+
+<!-- ===================== 頁尾 ===================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="brand">
+          <svg class="logo" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <rect width="48" height="48" rx="11" fill="#5E8CB5"/>
+            <g stroke="#E0A235" stroke-width="2" stroke-linecap="round">
+              <line x1="24" y1="9" x2="24" y2="15"/>
+              <line x1="35" y1="13" x2="31" y2="17.5"/>
+              <line x1="13" y1="13" x2="17" y2="17.5"/>
+              <line x1="38" y1="24" x2="32.5" y2="24"/>
+              <line x1="10" y1="24" x2="15.5" y2="24"/>
+            </g>
+            <path d="M14 36 A10 10 0 0 1 34 36" fill="none" stroke="#E0A235" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="24" cy="36" r="3.4" fill="#FBF9F3"/>
+          </svg>
+          <span class="brand-text">
+            <span class="zh">白袍人生學院</span><br>
+            <span class="en">WHITE COAT LIFE ACADEMY</span>
+          </span>
+        </div>
+        <p>陪伴醫師走出診間，整合「醫療 × 商業 × 影響力」，成為新世代的整合型人才。</p>
+      </div>
+      <div class="foot-col">
+        <h5>本課程</h5>
+        <a href="#why">課程緣起</a>
+        <a href="#benefit">課程亮點</a>
+        <a href="#agenda">課程議程</a>
+        <a href="#register">線上報名</a>
+      </div>
+      <div class="foot-col">
+        <h5>聯絡我們</h5>
+        <p>主辦單位：白袍人生學院</p>
+        <p>Email：drchang.ent33@gmail.com</p>
+        <p>主講講師：陳昱傑 醫師</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 白袍人生學院 White Coat Life Academy. All rights reserved.</span>
+      <span class="motto">一群人一起打拼，走得更遠。</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== 浮動報名鈕 ===================== -->
+<div class="float-cta">
+  <div class="fc-text">
+    <b>AIEO 實戰工作坊</b>
+    <span>8/30（日）・限額 60 名</span>
+  </div>
+  <a href="#register" class="btn btn-gold">立即報名</a>
+</div>
+
+<!-- ===================== 成功 Modal ===================== -->
+<div class="modal" id="modal">
+  <div class="modal-card">
+    <div class="check">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <h3>報名表已送出！</h3>
+    <p id="modalMsg">感謝你的報名。白袍人生學院承辦人員將於 1–2 個工作天內與你聯繫，確認後續報名與繳費事宜。</p>
+    <button class="btn btn-navy" onclick="document.getElementById('modal').classList.remove('show')">我知道了</button>
+  </div>
+</div>
+
+<script>
+/* =========================================================
+   報名表單送出設定
+   ---------------------------------------------------------
+   這是靜態網頁，預設為「預覽模式」：送出後僅顯示成功訊息。
+   要讓表單真正收得到資料，二選一：
+
+   【方案 A：Formspree】最快
+     1. 到 https://formspree.io 免費註冊，建立一個表單
+     2. 把取得的網址（例：https://formspree.io/f/xxxxxx）
+        填到下面的 FORM_ENDPOINT
+     → 完成後，報名資料會直接寄到你設定的信箱。
+
+   【方案 B：Google 表單】
+     1. 建一份 Google 表單
+     2. 把本頁 <form> 區塊換成 Google 表單的 iframe 嵌入碼即可。
+   ========================================================= */
+const FORM_ENDPOINT = ""; // ← 留空＝預覽模式；填入 Formspree 網址＝正式收件
+
+/* ---------- 導覽列捲動變色 ---------- */
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('solid', window.scrollY > 40);
+onScroll();
+window.addEventListener('scroll', onScroll);
+
+/* ---------- 手機選單 ---------- */
+const burger = document.getElementById('burger');
+const navLinks = document.getElementById('navLinks');
+burger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+/* ---------- 進場動畫 ---------- */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }});
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ---------- 倒數計時 ---------- */
+const target = new Date('2026-08-30T09:00:00+08:00').getTime();
+const pad = n => String(n).padStart(2, '0');
+function tick(){
+  const diff = target - Date.now();
+  if (diff <= 0){
+    ['cd-d','cd-h','cd-m','cd-s'].forEach(id => document.getElementById(id).textContent='00');
+    return;
+  }
+  const d = Math.floor(diff/86400000);
+  const h = Math.floor(diff%86400000/3600000);
+  const m = Math.floor(diff%3600000/60000);
+  const s = Math.floor(diff%60000/1000);
+  document.getElementById('cd-d').textContent = d;
+  document.getElementById('cd-h').textContent = pad(h);
+  document.getElementById('cd-m').textContent = pad(m);
+  document.getElementById('cd-s').textContent = pad(s);
+}
+tick(); setInterval(tick, 1000);
+
+/* ---------- FAQ 手風琴 ---------- */
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-a').style.maxHeight = null;
+    });
+    if (!open){
+      item.classList.add('open');
+      const a = item.querySelector('.faq-a');
+      a.style.maxHeight = a.scrollHeight + 'px';
+    }
+  });
+});
+
+/* ---------- 表單驗證與送出 ---------- */
+const form = document.getElementById('regForm');
+const modal = document.getElementById('modal');
+const modalMsg = document.getElementById('modalMsg');
+
+function setInvalid(id, bad){
+  document.getElementById(id).closest('.f-group').classList.toggle('invalid', bad);
+}
+const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+const isPhone = v => /^[0-9\-+() ]{8,}$/.test(v.trim());
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  let ok = true;
+  const name = document.getElementById('name');
+  const phone = document.getElementById('phone');
+  const email = document.getElementById('email');
+  const identity = document.getElementById('identity');
+  const agree = document.getElementById('agree');
+
+  if (!name.value.trim()){ setInvalid('name', true); ok = false; } else setInvalid('name', false);
+  if (!isPhone(phone.value)){ setInvalid('phone', true); ok = false; } else setInvalid('phone', false);
+  if (!isEmail(email.value)){ setInvalid('email', true); ok = false; } else setInvalid('email', false);
+  if (!identity.value){ setInvalid('identity', true); ok = false; } else setInvalid('identity', false);
+
+  const agreeErr = document.getElementById('agreeErr');
+  if (!agree.checked){ agreeErr.style.display='block'; ok = false; } else agreeErr.style.display='none';
+
+  if (!ok){
+    form.querySelector('.invalid, #agreeErr')?.scrollIntoView({behavior:'smooth', block:'center'});
+    return;
+  }
+
+  const btn = form.querySelector('.form-submit');
+  btn.textContent = '送出中…';
+  btn.disabled = true;
+
+  try {
+    if (FORM_ENDPOINT){
+      const res = await fetch(FORM_ENDPOINT, {
+        method:'POST',
+        headers:{'Accept':'application/json'},
+        body:new FormData(form)
+      });
+      if (!res.ok) throw new Error('send failed');
+      modalMsg.textContent = '感謝你的報名！白袍人生學院承辦人員將於 1–2 個工作天內與你聯繫，確認後續報名與繳費事宜。';
+    } else {
+      // 預覽模式
+      await new Promise(r => setTimeout(r, 600));
+      modalMsg.textContent = '（目前為預覽模式）表單外觀與驗證皆正常運作。設定 Formspree 或 Google 表單後，即可正式收件。';
+    }
+    modal.classList.add('show');
+    form.reset();
+  } catch (err) {
+    alert('送出時發生問題，請稍後再試，或直接來信 drchang.ent33@gmail.com');
+  } finally {
+    btn.textContent = '送出報名表 →';
+    btn.disabled = false;
+  }
+});
+
+modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('show'); });
+</script>
+</body>
+</html>
