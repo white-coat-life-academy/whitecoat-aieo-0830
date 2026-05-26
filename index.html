@@ -476,6 +476,29 @@ header.solid{background:rgba(26,61,99,.97);box-shadow:0 6px 24px -12px rgba(0,0,
 .final .motto{font-family:var(--serif);font-weight:700;font-size:15px;color:var(--sky);margin-top:26px;letter-spacing:.06em;}
 
 /* =========================================================
+   主辦學院介紹（含 banner）
+   ========================================================= */
+.about-academy{background:linear-gradient(180deg,#fff,#f3f1ea);padding:88px 0;}
+.about-academy .academy-card{
+  max-width:1000px;margin:0 auto;background:#fff;
+  border:1px solid var(--cloud);border-radius:20px;overflow:hidden;
+  box-shadow:0 30px 60px -40px rgba(26,61,99,.35);
+}
+.academy-banner-img{width:100%;display:block;background:#1A3D63;}
+.academy-text{padding:38px 40px;text-align:center;}
+.academy-text .eyebrow{color:var(--gold);margin-bottom:14px;}
+.academy-text h3{
+  font-family:var(--serif);font-weight:900;font-size:clamp(22px,3vw,30px);
+  color:var(--navy);line-height:1.5;letter-spacing:.04em;margin-bottom:14px;
+}
+.academy-text p{font-size:15px;color:#4f555b;font-weight:300;line-height:1.95;max-width:680px;margin:0 auto;}
+.academy-text .gold-line{margin:18px auto 22px;}
+@media(max-width:680px){
+  .about-academy{padding:56px 0;}
+  .academy-text{padding:26px 22px;}
+}
+
+/* =========================================================
    頁尾
    ========================================================= */
 footer{background:var(--ink);color:rgba(251,249,243,.62);padding:50px 0 26px;}
@@ -951,6 +974,28 @@ footer{background:var(--ink);color:rgba(251,249,243,.62);padding:50px 0 26px;}
     <p>限額 30 人。留一個位子給願意往前走的你。</p>
     <a href="#register" class="btn btn-gold">立即報名 8/30 場次 →</a>
     <p class="motto">一個人走比較快；一群人一起，走得更遠。</p>
+  </div>
+</section>
+
+<!-- ===================== 主辦學院介紹 ===================== -->
+<section class="about-academy">
+  <div class="wrap">
+    <div class="academy-card reveal">
+      <img class="academy-banner-img" src="assets/academy-banner.jpg"
+           alt="白袍人生學院 — 專屬醫師的多技能供應鏈"
+           onerror="this.style.display='none';" />
+      <div class="academy-text">
+        <div class="eyebrow">ABOUT THE ACADEMY</div>
+        <h3>白袍人生學院<br>專屬醫師的<span style="color:var(--gold)">多技能供應鏈</span></h3>
+        <div class="gold-line"></div>
+        <p>
+          由耳鼻喉專科張益豪醫師於 2024 年創立，<br>
+          橫跨中醫、西醫、牙醫的醫師共學共好平台。<br>
+          我們相信：白袍不只是職稱，<br>
+          而是一張可以自由書寫的人生地圖。
+        </p>
+      </div>
+    </div>
   </div>
 </section>
 
